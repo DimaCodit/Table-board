@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<?import com.dr.test.ContextMenuFix?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dr.test.Controller">
+    <children>
+        <StackPane fx:id="stackPane" alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TableView fx:id="table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                    <columns>
+                        <TableColumn fx:id="sampleColumn" prefWidth="75.0" text="Column X" visible="false">
+                            <contextMenu>
+                                <ContextMenuFix fx:id="columnMenu">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#renameColumn" text="Переименовать" />
+                                        <MenuItem mnemonicParsing="false" onAction="#delColumn" text="Удалить" />
+                                    </items>
+                                </ContextMenuFix>
+                            </contextMenu>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+                <ToolBar fx:id="settingsPanel" prefHeight="49.0" prefWidth="554.0" visible="false">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <items>
+                        <Button fx:id="addButton" defaultButton="true" mnemonicParsing="false" onAction="#addColumn" text="Добавить колонку" />
+                        <Button fx:id="exportButton" mnemonicParsing="false" visible="false" onAction="#exportSettings" text="Экспрот настроек" />
+                        <Button fx:id="importButton" mnemonicParsing="false" visible="false" onAction="#importSettings" text="Импорт настроек" />
+                        <SplitMenuButton fx:id="themesMenu" mnemonicParsing="false" text="Тема">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Стандартная" userData="#ececec" onAction="#setTheme"/>
+                                <MenuItem mnemonicParsing="false" text="Коричневая" userData="rosybrown" onAction="#setTheme"/>
+                                <MenuItem mnemonicParsing="false" text="Темная" userData="darkslategray" onAction="#setTheme"/>
+                                <MenuItem mnemonicParsing="false" text="Черная" userData="BLACK" onAction="#setTheme"/>
+                                <MenuItem mnemonicParsing="false" text="Зеленая" userData="DARKSEAGREEN" onAction="#setTheme"/>
+                                <MenuItem mnemonicParsing="false" text="Голубая" userData="SKYBLUE" onAction="#setTheme"/>
+                                <MenuItem mnemonicParsing="false" text="Желтая" userData="GOLD" onAction="#setTheme"/>
+                                <MenuItem mnemonicParsing="false" text="Серая" userData="GRAY" onAction="#setTheme"/>
+                                <MenuItem mnemonicParsing="false" text="Светлая" userData="IVORY" onAction="#setTheme"/>
+                                <MenuItem mnemonicParsing="false" text="Светло-красная" userData="PEACHPUFF" onAction="#setTheme"/>
+                            </items>
+                        </SplitMenuButton>
+                        <SplitMenuButton fx:id="fontMenu" mnemonicParsing="false" text="Шрифт">
+                            <items>
+                                <MenuItem fx:id="font10" mnemonicParsing="false" styleClass="font10" text="Абвг" userData="10" onAction="#setFontSize" />
+                                <MenuItem fx:id="font15" mnemonicParsing="false" styleClass="font15" text="Абвг" userData="15" onAction="#setFontSize" />
+                                <MenuItem fx:id="font20" mnemonicParsing="false" styleClass="font20" text="Абвг" userData="20" onAction="#setFontSize" />
+                                <MenuItem fx:id="font25" mnemonicParsing="false" styleClass="font25" text="Абвг" userData="25" onAction="#setFontSize" />
+                            </items>
+                        </SplitMenuButton>
+                        <Label text="Порт:" />
+                        <TextField fx:id="portField" />
+                        <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closePanel" text="Сохранить" />
+                        <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButton" text="Отменить" />
+                    </items>
+                </ToolBar>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
+
