@@ -29,12 +29,12 @@
 
   }
 
-    .dark {
+.dark {
        -fx-base: darkslategray;
 
     }
 
-  .base {
+.base {
        -fx-base: base;
 
     }
