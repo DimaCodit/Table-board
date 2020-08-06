@@ -1,0 +1,40 @@
+ .root {
+
+     -fx-font-size: 15px;
+ }
+
+ text {
+     -fx-color: black;
+ }
+
+.font10 {
+    -fx-font-size: 10px;
+ }
+
+.font15 {
+     -fx-font-size: 15px;
+  }
+
+.font20 {
+       -fx-font-size: 20px;
+    }
+
+.font25 {
+       -fx-font-size: 25px;
+    }
+
+  .brown {
+
+      -fx-base: rosybrown;
+
+  }
+
+    .dark {
+       -fx-base: darkslategray;
+
+    }
+
+  .base {
+       -fx-base: base;
+
+    }
