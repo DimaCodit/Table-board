@@ -9,7 +9,7 @@
       <resource>
         <directory>${project.basedir}/src/main/resources</directory>
         <includes>
-          <include>**/*.fxml</include>
+          <include>**/*.*</include>
         </includes>
       </resource>
     </resources>
